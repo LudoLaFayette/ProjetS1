@@ -1,0 +1,8 @@
+.chapo{
+    font-family: var(--font-texte-intro);
+    font-style: italic;
+}
+h1{
+    font-family: var(--font-texte-subtitle);
+    font-weight: bold;
+}
