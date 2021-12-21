@@ -1,14 +1,40 @@
 .header{
     background-color : var(--background-header);
     position: fixed;
+    top: 0;
     left: 0;
-    top : 0;
     width: 100%;
-    padding: 0 var(--espace3x);
+    z-index: 2;
+    padding: var(--space2x) var(--space3x);
+    display: flex;
     justify-content: space-between;
-    min-height: 60px;
-    
+    transition: all .3s ease-in-out;
 }
+.header--atTop {
+    background-color: var(--background-header);
+  }
+  
+  .header__end {
+    display: flex;
+    gap: var(--space2x);
+  }
+  
+  .header__search {
+    width: 40px;
+    filter: invert();
+  }
+  
+  /* On annule le filtre d'inversion des couleurs lorsqu'on commence à scroller dans la page et que l'en-tête devient blanc */
+  .header--atTop .header__search {
+    filter: none;
+  }
+    
 .header__title{
     font-family: var(--font-texte-header);
+    font-weight: bolder;
+}
+
+.header__logo{
+    display:block;
+    left: auto;
 }

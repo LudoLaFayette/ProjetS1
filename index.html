@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fémokipédia</title>
     <link rel='stylesheet' href='src/css/styles.css'>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 </head>
 
 
-<body>
-    <header class="header">
+<body x-data="{ atTop: true }">
 
-        <div>
-            <h1 class="header__title">Fémokipédia</h1>
+    <header class="header container" 
+                    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+                    :class="{ 'header--atTop' : !atTop }">
+
+        <div class="header__start">
+            <a href="index.html">
+            <img class="header__logo" src="public/logo/Group 7.svg" alt="logo Fémokipédia">
+            </a>
         </div>
-        <div>
-            <a href="index.html"><img src="public/logo/Group 7.svg" alt="logo du site Fémokipédia"> </a>               
+
+        <div class="header__title">
+            <H1>Femokipédia</H1>
         </div>
-        
-       
+
+        <div class="header__end">
+
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @pointerdown="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+        </button>
+
+    <!-- Menu principal -->
+    
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <li class="menu__item"><a class="menu__link" href="Histoire.html">L'histoire du féminsme</a></li>
+                <li class="menu__item"><a class="menu__link" href="FigureCoco.html">La Figure : Coco Channel</a></li>
+                <li class="menu__item"><a class="menu__link" href="FemStyles.html">Les styles du féminisme</a></li>
+                <li class="menu__item"><a class="menu__link" href="glossaire.html">Glossaire</a></li>                
+                <li class="menu__item"><a class="menu__link" href="galerie.html">Galerie</a></li>
+                <li class="menu__item"><a class="menu__link" href="frise chronologique.html">Frise chronologique</a></li>
+                <li class="menu__item"><a class="menu__link" href="a propos.html">A propos</a></li>
+                <li class="menu__item"><a class="menu__link" href="autres projets.html">Autres projets</a></li>
+                <li class="menu__item menu__item--btn"><a class="menu__link" href="nous contacter.html">Nous contacter</a></li>
+            </ul>
+            </nav>
+    <!-- Fin du menu principal -->
+
+        </div>
+
     </header>
 
-    <button>
-        
-        <nav id="mySidenav" class="sidenav">
-            <span style="font-size:30px;cursor:pointer" onclick="closeNav()"><img src="public/buttons/Group 17.svg" alt="fermer"></span>
-            
-                <a href="article 1.html">L'histoire</a>
-                <a href="article 2.html">La figure</a>
-                <a href="article 3.html">Les styles</a>
-                <a href="glossaire.html">Glossaire</a>
-                <a href="galerie.html">Galerie</a>
-                <a href="frise chronologique.html">Frise chronologique</a>
-                <a href="a propos.html">A propos</a>
-                <a href="autres projets.html">Autres projets</a>
-                <a href="nous contacter.html">Nous contacter</a>               
-                <img src="#" alt="drapeau Uk">
-            
-        </nav>
-          
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="public/buttons/Group 8.svg" alt="menu navbar"></span>
-          
-          <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "375px";
-          }
-          
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-          </script>
-    </button>
-    <video src="#">Intro du site</video>
+   <main>
+
+       <div>
+        <video src="#">Intro du site</video>
+       </div>
+    
     <span class="chapo">
         <p>
             En France, de nombreuses inégalités subsistent dans la population. L’une d’entre elles est liée entre les sexes. Depuis de nombreuses années, les hommes et les femmes ne sont pas sur le même pied d’estale. En réponse à cette « inégalité des sexes », le terme de féminisme fait son apparition. Sous ce mot, les femmes se regroupent et manifestent afin de se faire entendre comme avec l’hashtag « #Metoo ». Vous allez explorer ce mouvement grâce à son histoire. Puis, vous allez voir une figure de ce mouvement. Et enfin, vous allez en apprendre sur les différentes idéologies de ce mouvement social.
@@ -81,6 +89,7 @@
         <img src="#" alt="logo de boite">
         <button></button>
     </p>
+</main>
 
     <footer>
         <p>

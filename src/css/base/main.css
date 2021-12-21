@@ -1,3 +1,19 @@
+/* Transforme le modèle de boite par défaut pour inclure dans la largeur et la hauteur, les marges intérieures et les bordures. */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* permet d'annuler la mise en forme des bouton qu'applique le navigateur. */
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  } 
+
 .chapo{
     font-family: var(--font-texte-intro);
     font-style: italic;
@@ -5,4 +21,17 @@
 h1{
     font-family: var(--font-texte-subtitle);
     font-weight: bold;
+}
+/* Pour enlever l'apparence par défaut des listes */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* Bug IOS
+=> L'overflow doit être appliqué sur l'élément body ET html
+pour faire disparaître le scroll sur safari IOS */
+.noscroll,
+.noscroll body {
+  overflow: hidden;
 }

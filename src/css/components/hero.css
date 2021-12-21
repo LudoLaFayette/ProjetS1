@@ -1,0 +1,5 @@
+.hero__title,
+.hero__sub-title {
+  position: relative;
+  z-index: 1;
+}
