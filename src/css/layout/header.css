@@ -28,13 +28,14 @@
   .header--atTop .header__search {
     filter: none;
   }
-    
-.header__title{
-    font-family: var(--font-texte-header);
-    font-weight: bolder;
-}
 
 .header__logo{
     display:block;
     left: auto;
+}
+.header__tampon{
+    display:block;
+    background-color: var(--background-header);
+    height: 13.5vh;
+    margin-bottom: 25px;
 }

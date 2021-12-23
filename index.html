@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fémokipédia</title>
+    <meta name="description" content="Fémokipédia, la vraie page des femmes sans point de vue">
+    <title>Fémokipédia - Acceuil</title>
     <link rel='stylesheet' href='src/css/styles.css'>
-    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>   
 </head>
 
 
@@ -17,13 +18,11 @@
                     :class="{ 'header--atTop' : !atTop }">
 
         <div class="header__start">
-            <a href="index.html">
-            <img class="header__logo" src="public/logo/Group 7.svg" alt="logo Fémokipédia">
-            </a>
+            <a href="index.html"><img class="header__logo" src="public/logo/Group 7.svg" alt="logo Fémokipédia"></a>
         </div>
 
-        <div class="header__title">
-            <H1>Femokipédia</H1>
+        <div>
+            <h1>Femokipédia</h1>
         </div>
 
         <div class="header__end">
@@ -55,52 +54,75 @@
 
     </header>
 
-   <main>
+   <main class="main__content">
 
-       <div>
-        <video src="#">Intro du site</video>
+        <div class="header__tampon"> </div>
+
+       <div class="chapo__video">
+        <video controls width="350" src="#" >Micro trottoir</video>
        </div>
     
     <span class="chapo">
         <p>
-            En France, de nombreuses inégalités subsistent dans la population. L’une d’entre elles est liée entre les sexes. Depuis de nombreuses années, les hommes et les femmes ne sont pas sur le même pied d’estale. En réponse à cette « inégalité des sexes », le terme de féminisme fait son apparition. Sous ce mot, les femmes se regroupent et manifestent afin de se faire entendre comme avec l’hashtag « #Metoo ». Vous allez explorer ce mouvement grâce à son histoire. Puis, vous allez voir une figure de ce mouvement. Et enfin, vous allez en apprendre sur les différentes idéologies de ce mouvement social.
+            En France, de nombreuses inégalités subsistent dans la population. L’une d’entre elles est liée entre les sexes. Depuis de nombreuses années, les hommes et les femmes ne sont pas sur le même pied d’estale. En réponse à cette « inégalité des sexes », le terme de féminisme fait son apparition. Sous ce mot, les femmes se regroupent et manifestent afin de se faire entendre comme avec l’hashtag « #Metoo ». 
     Voici les tweets par lesquels vous pouvez accéder au contenu du site :
         </p>        
     </span>
     
-    <p>
-        <h1>Féminisme : une histoire de temps</h1>
-        <p> Vivez le passé comme le présent du féminisme.</p>
-        <img src="#" alt="logo du temps">
-        <button>
-            <img src="#" alt="boutton suite">
-            <a href="article 1.html"></a>
-        </button>
-    </p>
-    <p>
-        <h1>Coco chanel : une femme de mode</h1>
-        <p>Découvrez la femme qui a su apporter la mode féminine aux femmes du monde.</p>
-        <img src="#" alt="logo de robe">
-        <button></button>
-    </p>
-    <p>
-        <h1>Féminisme :  une variété de styles</h1>
-        <p>Savez-vous qu’il existe plusieurs « styles » de féminisme ? Voyez par vous-même.</p>
-        <img src="#" alt="logo de boite">
-        <button></button>
-    </p>
+    <div class="hero1" >
+        <div class="hero1__h2N1">
+            <h2>Féminisme : une histoire de temps</h2>
+        </div> 
+        <div class="hero1__icon1">
+            <a href="Histoire.html"><img id='temps' src="public/icons/clock 1.svg" alt="logo du temps" height="250" width="250"></a>            
+        </div>   
+        <div class="hero1__p1">
+            <p> Vivez le passé comme le présent du féminisme.</p>  
+        </div>   
+         
+                
+    </div>
+    <div class="hero2">
+        <div class="hero2__h2n2" >
+            <h2>Coco chanel : une femme de mode</h2>
+        </div>
+        <div class="hero2__icon2">
+            <a href="FigureCoco.html"><img id="robe" src="public/icons/robe.svg" alt="logo de robe" height="250" width="250"></a>
+        </div>        
+        <div class="hero2__p2">
+            <p>Découvrez la femme qui a su apporter la mode féminine aux femmes du monde.</p>
+        </div>      
+    </div>
+    
+    <div class="hero3">
+        <div class="hero3__h3n3">
+            <h2>Féminisme :  une variété de styles</h2>
+        </div>
+        <div class="hero3__icon3">
+            <a href="FemStyles.html"><img id="boite" src="public/icons/archive 1.svg" alt="logo de Sboite" height="250" width="250"></a>
+        </div>
+        <div class="hero3__p3">
+            <p>Savez-vous qu’il existe plusieurs « styles » de féminisme ? Voyez par vous-même.</p>
+        </div>   
+    </div>
 </main>
 
-    <footer>
-        <p>
-            Ludovic Faye – Groupe A2
-    Projet réalisé dans le cadre d’un exercice pédagogique au département MMI de Montbéliard 
-        </p>
-        <button>
-            <img src="#" alt="logo mail">
-            <a href="mailto:ludovicfaye89@gmail.com"></a>
-        </button>    
-        <img src="#" alt="logo dpt mmi">
+    <footer class="footer container">
+        <div>
+            <p class="footer__p1">
+                Ludovic Faye – Groupe A2
+            </p>
+            <p class="footer__p2">Projet réalisé dans le cadre d’un exercice pédagogique au département MMI de Montbéliard
+            </p>                
+        </div> 
+        <div class="footer__end">
+        <div>
+            <a href="mailto:ludovicfaye89@gmail.com"> <img src="public/icons/Mail.svg" alt="logo mail"></a> 
+        </div> 
+        <div>
+            <img src="public/th-removebg-preview 1 (1).svg" alt="logo dpt mmi">
+        </div>   
+        </div>     
     </footer>
 </body>
 

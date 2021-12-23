@@ -1,0 +1,31 @@
+.footer{
+    background-color : var(--background-header);
+    top: 0;
+    left: 0;
+    height : auto;
+    width: 100%;
+    z-index: 2;
+    padding: var(--space1x) var(--space2x);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.footer__p1{
+    display:flex;
+    font-family: var(--font-texte-footer);
+    font-size: var(--text-lg);
+    margin-bottom: -10px;
+}
+.footer__p2{
+    display:block;
+    font-family: var(--font-texte-footer);
+    font-size: var(--text-lg);
+}
+
+
+.footer__end {
+    display: flex;
+    gap: var(--space1x);
+    align-items: center;
+  }
