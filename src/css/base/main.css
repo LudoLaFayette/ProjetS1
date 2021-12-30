@@ -47,8 +47,18 @@ button {
     line-height: 1.50 ;
 }
 a{
-    display:inline-flex;
+    display:inline;
     text-align:center;
+    font-family: var(--font-texte-main);
+    font-weight: bold;
+    color: var(--blue-special); 
+}
+
+blockquote{
+    font-family: var(--font-texte-intro);
+    font-style: italic;
+    line-height: 1.30;
+    font-size: 14px;
 }
 h1{
     font-family: var(--font-texte-subtitle);
@@ -65,6 +75,35 @@ h2{
     margin-top :8px;
     font-family: var(--font-texte-main);
     line-height: 1.25;
+}
+.main__textetImg__a{
+    display:inline;
+    text-align:center;
+    font-family: var(--font-texte-main);
+}
+.ul__autresProjets{
+    font-family: var(--font-texte-main);
+    font-size: 14px;
+}
+.contact__formulaire{
+    width: 200px;
+  clear: both;
+  margin-left: 8px;
+  
+}
+.contact__formulaire label{
+  font-family: var(--font-texte-main);
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 8px;
+}
+.contact__formulaire input{
+  width: 100%;
+  clear: both;
+  margin-top: 2px;
+}
+.contact__formulaire button{
+    margin-top: 8px;
 }
 /* Pour enlever l'apparence par défaut des listes */
 .list-unstyled {

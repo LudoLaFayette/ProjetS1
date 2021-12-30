@@ -1,46 +1,100 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autres projets</title>
+    <meta name="description" content="Fémokipédia, la vraie page des femmes sans point de vue">
+    <title>Fémokipedia - Autres projets</title>
+    <link rel='stylesheet' href='src/css/styles.css'>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script> 
 </head>
-<header>
-    <title>Fémokipédia</title>
-    <img src="#" alt="logo du site Fémokipédia">
+
+<body x-data="{ atTop: true }">
+    <header  class="header container" 
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
+        
+
+        <div class="header__start">
+        <a href="index.html"><img class="header__logo" src="public/logo/Group 7.svg" alt="logo Fémokipédia"></a>
+        </div>
+
+        <div>
+        <h1>Femokipédia</h1>
+        </div>
+
+        <div class="header__end">
+
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+            @pointerdown="menuIsOpen = !menuIsOpen" 
+            :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+        </button>
+
+        <!-- Menu principal -->
+
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+        <ul class="menu__list list-unstyled">
+            <li class="menu__item"><a class="menu__link" href="Histoire.html">L'histoire du féminsme</a></li>
+            <li class="menu__item"><a class="menu__link" href="FigureCoco.html">La Figure : Coco Channel</a></li>
+            <li class="menu__item"><a class="menu__link" href="FemStyles.html">Les styles du féminisme</a></li>
+            <li class="menu__item"><a class="menu__link" href="glossaire.html">Glossaire</a></li>                
+            <li class="menu__item"><a class="menu__link" href="galerie.html">Galerie</a></li>
+            <li class="menu__item"><a class="menu__link" href="frise chronologique.html">Frise chronologique</a></li>
+            <li class="menu__item"><a class="menu__link" href="a propos.html">A propos</a></li>
+            <li class="menu__item"><a class="menu__link" href="autres projets.html">Autres projets</a></li>
+            <li class="menu__item menu__item--btn"><a class="menu__link" href="nous contacter.html">Nous contacter</a></li>
+            <li class="menu__item menu__item--btn"><a class="menu__link" href="#"><img src="public/image 29.webp" alt="drapeau uk"></a></li>
+        </ul>
+        </nav>
+        <!-- Fin du menu principal -->
+
+        </div>
+
+</header> 
+<main class="main__content">
     
-</header>
-<body>
-    <h1>autres projets</h1>
-    <ul>
+    <div class="header__tampon"> </div>
+
+    <h1>Autres projets</h1>
+    <ul class="ul__autresProjets">
         <li>Women's Work de Lilian Chesneau :        </li>
-        <img src="#" alt="logo WW">
+        <img src="public/image 25.webp" alt="logo WW">
         <li>French Feminism de Florentin Demortiere  :        </li>
-        <img src="#" alt="logo FF">
+        <img src="public/image 26.webp" alt="logo FF">
         <li>Les Victorieuses de Justine Duval:</li>
-        <img src="#" alt="LV logo">
+        <img src="public/image 27.webp" alt="LV logo">
         <li>« » Agache Eccher        </li>
         <li>« » Asma Es-Sabbar        </li>
         <li>« » Mohammed Daboub</li>
         <li>Féminisme & Humanité de Bryan Ferry :         </li>
-        <img src="#" alt="logo F&H">
+        <img src="public/image 28.webp" alt="logo F&H">
         <li>« » Eliot Feuvrier</li>
         <li>« » Julien Fleurent        </li>
         <li>Féminiscience de Maxime Paris : </li>
-        <img src="#" alt="logo FS">
+        <img src="public/image 24.webp" alt="logo FS">
     </ul>
     
 </body>
-<footer>
-    <p>
-        Ludovic Faye – Groupe A2
-Projet réalisé dans le cadre d’un exercice pédagogique au département MMI de Montbéliard 
-    </p>
-    <button>
-        <img src="#" alt="logo mail">
-        <a href="mailto:ludovicfaye89@gmail.com"></a>
-    </button>    
-    <img src="#" alt="logo dpt mmi">
+
+</main>
+ 
+<footer class="footer container">
+    <div>
+        <p class="footer__p1">
+            Ludovic Faye – Groupe A2
+        </p>
+        <p class="footer__p2">Projet réalisé dans le cadre d’un exercice pédagogique au département MMI de Montbéliard
+        </p>                
+    </div> 
+    <div class="footer__end">
+    <div>
+        <a href="mailto:ludovicfaye89@gmail.com"> <img src="public/icons/Mail.svg" alt="logo mail"></a> 
+    </div> 
+    <div>
+        <img src="public/th-removebg-preview 1 (1).svg" alt="logo dpt mmi">
+    </div>   
+    </div>     
 </footer>
 </html>

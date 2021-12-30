@@ -1,68 +1,152 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fémokipédia, la vraie page des femmes sans point de vue">
     <title>Féminisme : une variété de styles</title>
+    <link rel='stylesheet' href='src/css/styles.css'>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script> 
 </head>
-<header>
-    <title>Fémokipédia</title>
-    <img src="#" alt="logo du site Fémokipédia">
+
+<body x-data="{ atTop: true }">
+    <header  class="header container" 
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
+
+    
+        <div class="header__start">
+        <a href="index.html"><img class="header__logo" src="public/logo/Group 7.svg" alt="logo Fémokipédia"></a>
+        </div>
+
+        <div>
+        <h1>Femokipédia</h1>
+        </div>
+
+        <div class="header__end">
+
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+            @pointerdown="menuIsOpen = !menuIsOpen" 
+            :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+        </button>
+
+        <!-- Menu principal -->
+
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+        <ul class="menu__list list-unstyled">
+            <li class="menu__item"><a class="menu__link" href="Histoire.html">L'histoire du féminsme</a></li>
+            <li class="menu__item"><a class="menu__link" href="FigureCoco.html">La Figure : Coco Channel</a></li>
+            <li class="menu__item"><a class="menu__link" href="FemStyles.html">Les styles du féminisme</a></li>
+            <li class="menu__item"><a class="menu__link" href="glossaire.html">Glossaire</a></li>                
+            <li class="menu__item"><a class="menu__link" href="galerie.html">Galerie</a></li>
+            <li class="menu__item"><a class="menu__link" href="frise chronologique.html">Frise chronologique</a></li>
+            <li class="menu__item"><a class="menu__link" href="a propos.html">A propos</a></li>
+            <li class="menu__item"><a class="menu__link" href="autres projets.html">Autres projets</a></li>
+            <li class="menu__item menu__item--btn"><a class="menu__link" href="nous contacter.html">Nous contacter</a></li>
+            <li class="menu__item menu__item--btn"><a class="menu__link" href="#"><img src="public/image 29.webp" alt="drapeau uk"></a></li>
+        </ul>
+        </nav>
+        <!-- Fin du menu principal -->
+
+        </div>
     
 </header>
-<body>
+<main class="main__content">
+
+    
+    <div class="header__tampon"> </div>
+
     <h1>Féminisme : une variété de styles</h1>
-    <article>
+    <article class="chapo">
         Le féminisme, comme on le connaît de nos jours, est vue comme un mouvement pour la libération des femmes dans la société. Un mouvement qui demande que les femmes puissent accéder à des droits que les hommes ont. Mais le parcours est devenu de plus en plus long et les choses semblent aller lentement. Depuis le 20ème siècle, les féministes se sont séparés dans leurs pensées. Mais elles restent unies dans leurs actions, telles que les manifestations. Nous allons explorer quelques-unes de ces pensées féministes. Ces pensées font de la confusion au mot "féminisme", qui du coup perd de son sens propre (défense).
     </article>
+
+
     <h2>Un féminisme "libérale"</h2>
-    <article>
-        Nous retraçons les différents mouvements grâce à un livre de la B.U que j'ai emprunté. Ce livre s'appelle "Pour la fin du sexisme", écrit par Angélique Gerard en 2019 (Ed.Eyrolles).  Dans ce livre, on retrace l'histoire du féminisme comme on en apprend sur l'auteur elle-même, de ce qu'elle en pense. 
+    <div class="main__txtEtImg">
+    <article >
+        Nous retraçons les différents mouvements grâce à un livre de la B.U que j'ai emprunté. Ce livre s'appelle "Pour la fin du sexisme", 
+        écrit par <a href="galerie.html" style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">Angélique Gerard</a> en 2019 (Ed.Eyrolles).  Dans ce livre, on retrace l'histoire du féminisme comme on en apprend sur l'auteur elle-même, de ce qu'elle en pense. 
     </article>
-    <img src="#" alt="couvrture livre Angélique Gérard">
-    <p>Cover du livre “Pour la fin du sexisme” </p>
-    <article>
+
+    <figure>
+        <img src="public/image 13.webp" alt="couvrture livre Angélique Gérard">
+        <figcaption>
+            Cover du livre “Pour la fin du sexisme” 
+        </figcaption>
+    </figure>
+</div>
+    
+
+
+    <article class="main__article">
         Mais surtout, Angélique aborde un argumentaire qui cherche à convaincre le lecteur à "penser femme". Car les hommes sont encore dans une pensée de "faux féminisme" pour la majorité. Et cela constitue un frein majeur dans les droits des femmes (inégalité).
     </article>
-    <article>
-        C'est donc pour cela qu'un féminisme dit libéral existe. Ces femmes étaient en masse dans la rue pour la loi sur l'avortement de Simone Veil (1975, politique). Et donc, pourquoi elles étaient là ? Parce que ces femmes étaient convaincues en une image. L'image d'une femme libérée de son côté maternel, qui donne à la vie. La femme a été longtemps vu comme un être procréateur et peu pour ce qu'elle est au fond. Le harcèlement sexuel de nos jours est vu comme un moyen d'avertir mal sainement une femme qu'un homme veut procréer avec elle. Du coup, cette forme de féminisme est l'une des plus médiatisés en France.
+
+
+    <article class="main__article">
+        C'est donc pour cela qu'un féminisme dit libéral existe. Ces femmes étaient en masse dans la rue pour la loi sur l'avortement de Simone Veil (1975, politique). Et donc, pourquoi elles étaient là ? Parce que ces femmes étaient convaincues en une image. L'image d'une femme libérée de son côté maternel, qui donne à la vie. La femme a été longtemps vu comme un
+        <a href="glossaire.html" style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">être procréateur</a> et peu pour ce qu'elle est au fond. Le harcèlement sexuel de nos jours est vu comme un moyen d'avertir mal sainement une femme qu'un homme veut procréer avec elle. Du coup, cette forme de féminisme est l'une des plus médiatisés en France.
     </article>
+
     <h2>Un féminisme "radical"</h2>
-    <article>
+
+    <article class="main__article">
         Dix plus tôt que le courant libéral, le féminisme radical se veut solution pour un problème plus grand. On sait tous que les femmes sont sujettes au harcèlement sexuel au travail. Mais on ne fait pas tous attention à la hiérarchie. Car ce courant pense que par la position qu’occupent les hommes, les femmes sont inférieures. Angélique Gerard dit même dans son livre : 
     </article>
-    <p>
+
+    <blockquote>
         "[...] pour désigner le système par lequel les hommes dominent les femmes à travers une division sexuelle du travail - les hommes à la production rémunérée, les femmes à la reproduction, non rémunérée".
-    </p>
-    <article>
+    </blockquote>
+
+
+    <article class="main__article">
         Cette hiérarchie d'entreprise serait donc égale à celle d’une vie domestique selon eux. À cela s'ajoutent, un "féminisme lesbien" et un "féminisme d'égalité", deux autres branches de ce mouvement.
     </article>
+
+
     <h2>Un féminisme "égalitariste"</h2>
-    <article>
+
+    <article  class="main__article">
         Mais les divisions auront permis des unions par la suite. Cette pensée, native en 1900, a su donner la force nécessaire aux autres courants d'agir.
     </article>
-    <article>
+
+    <article class="main__article">
         Le plan d'action de ce courant de remédier à l'égalité hommes/femmes de manière très générale (salaire). Ce féminisme peut agir sur des domaines comme le syndicalisme, la littérature, l'histoire, la science ou la place dans l'espace public.  Tout cela dans le seul but d'améliorer les conditions de vie des femmes et revoir leur place traditionnelle.
     </article>
-    <article>
-        L’avantage de ce courant, est qu'il conserve un ton d'actualité majeur sans pour autant perdre d'adhérent. On commence même à soulever des questions plus taboues sur l'identité et orientation sexuelle. Les transgenres et les lesbiennes sont ainsi mieux défendues qu'avant. C'est alors qu'on parle de féminisme postmoderne, qui touche aux questions sur les femmes les plus récentes.
+
+    <article class="main__article" >
+        L’avantage de ce courant, est qu'il conserve un ton d'actualité majeur sans pour autant perdre d'adhérent. On commence même à soulever des questions plus taboues sur l'identité et orientation sexuelle. 
+        Les <a href="glossaire.html"  style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">transgenres</a> et les lesbiennes sont ainsi mieux défendues qu'avant. C'est alors qu'on parle de féminisme postmoderne, qui touche aux questions sur les femmes les plus récentes.
     </article>
-    <p>
+
+    <p class="chapo">
         Maintenant, vous en savez davantage sur le féminisme et comment cela a fonctionné depuis ces dernières années. N'hésitez pas à me contacter pour un éventuel problème ou me soumettre un avis. Merci de votre lecture.   
     </p>
 
+</main>
+    
 
-</body>
-<footer>
-    <p>
-        Ludovic Faye – Groupe A2
-Projet réalisé dans le cadre d’un exercice pédagogique au département MMI de Montbéliard 
-    </p>
-    <button>
-        <img src="#" alt="logo mail">
-        <a href="mailto:ludovicfaye89@gmail.com"></a>
-    </button>    
-    <img src="#" alt="logo dpt mmi">
+
+    <footer class="footer container">
+        <div>
+            <p class="footer__p1">
+                Ludovic Faye – Groupe A2
+            </p>
+            <p class="footer__p2">Projet réalisé dans le cadre d’un exercice pédagogique au département MMI de Montbéliard
+            </p>                
+        </div> 
+        <div class="footer__end">
+        <div>
+            <a href="mailto:ludovicfaye89@gmail.com"> <img src="public/icons/Mail.svg" alt="logo mail"></a> 
+        </div> 
+        <div>
+            <img src="public/th-removebg-preview 1 (1).svg" alt="logo dpt mmi">
+        </div>   
+        </div> 
 </footer>
+</body>
+
 </html>
