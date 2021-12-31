@@ -65,4 +65,31 @@
     font-style: italic;
     font-size: 18px;
 }
+
+.galerie__hero{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 2px solid #000000;
+}
+
+.galerie__heroImage{
+    display:flex; 
+    margin:auto;  
+}
+.galerie__heroNom{
+    display:flex;
+    margin:auto;
+    font-size:25px;
+    margin-bottom: 8px;
+}
+.galerie__heroParagraphe{
+    display:flex;
+    margin:auto;
+    font-family: var(--font-texte-intro);
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 12px;
+    line-height: 1.3;
+}
    
