@@ -63,6 +63,7 @@ blockquote{
 h1{
     font-family: var(--font-texte-subtitle);
     font-weight: bolder;
+    text-align: center;
 }
 h2{
     font-family: var(--font-texte-subtitle);
