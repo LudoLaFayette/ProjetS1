@@ -8,6 +8,8 @@
             <title>Fémokipedia - Frise chronologique</title>
             <link rel='stylesheet' href='src/css/styles.css'>
             <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script> 
+            <script src="https://animejs.com/lib/anime.min.js"></script>
+            <script src="src/js/fonctions.js"></script>
         </head>
 
         <body x-data="{ atTop: true }">
@@ -56,12 +58,30 @@
         <main class="main__content">
             
             <div class="header__tampon"> </div>
-    <h1>Frise Chronlogique</h1>
-    <P class="chapo">Voici la frise chronologique sur le monde du féminisme qui montre les 3 grandes périodes des vagues du feminisme:
-    </P>
+
+            <h1>Frise Chronlogique</h1>
+            <P class="chapo">Voici la frise chronologique sur le monde du féminisme qui montre les 3 grandes périodes des vagues du feminisme:
+            </P>
+            
+            <div class="exemples carrousel">
+              <div class="droite15">&nbsp;</div>
+              <div class="carrousel">
+                <div class="images15">
+                  <img id="img1" class="image15 imgalt" src="./assets/img/tourEiffel-pigeons.jpg"/>
+                  <img id="img2" class="image15 imgalt" src="./assets/img/scooter.jpg"/>
+                  <img id="img3" class="image15 imgalt" src="./assets/img/delmare.png"/>
+                  <img id="img4" class="image15" src="./assets/img/margarita.jpg"/>
+                </div>
+              </div>
+            </div>
+            <script>
+        
+              /*carrouselAlternate();*/
+              carrousel();
+            </script>
 
 
-    <img src="#" alt="frise chrono complète"> <!--A créer une meilleure frise chrono en image pa carrousel!!!!-->
+
     </main>
     <footer class="footer container">
         <div>
