@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Artificial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Femokipédia - Error Page</title>
+    <link rel="stylesheet" href="./error_page.css" />
+    <link rel='stylesheet' href='src/css/styles.css'>
+    <script
+      src="https://kit.fontawesome.com/66aa7c98b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>   
+  </head>
+
+  
+  <body x-data="{ atTop: true }">
+      <header  class="header container" 
+      @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+      :class="{ 'header--atTop' : !atTop }">
+          
+  
+          <div class="header__start">
+              <a href="index.html"><img class="header__logo" src="public/logo/Group7.svg" alt="logo Fémokipédia"></a>
+          </div>
+  
+          <div>
+          <h1>Femokipédia</h1>
+          </div>
+  
+          <div class="header__end">
+  
+          <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+              @pointerdown="menuIsOpen = !menuIsOpen" 
+              :class="menuIsOpen && 'menu-btn--open'">
+          <span class="menu-btn__bar"></span>
+          </button>
+  
+          <!-- Menu principal -->
+  
+          <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+              <ul class="menu__list list-unstyled">
+                  <li class="menu__item"><a class="menu__link" href="Histoire.html">L'histoire du féminsme</a></li>
+                  <li class="menu__item"><a class="menu__link" href="FigureCoco.html">La Figure : Coco Channel</a></li>
+                  <li class="menu__item"><a class="menu__link" href="FemStyles.html">Les styles du féminisme</a></li>
+                  <li class="menu__item"><a class="menu__link" href="glossaire.html">Glossaire</a></li>                
+                  <li class="menu__item"><a class="menu__link" href="galerie.html">Galerie</a></li>
+                  <li class="menu__item"><a class="menu__link" href="Frise-chronologique.html">Frise chronologique</a></li>
+                  <li class="menu__item"><a class="menu__link" href="A-propos.html">A propos</a></li>
+                  <li class="menu__item"><a class="menu__link" href="Autres-projets.html">Autres projets</a></li>
+                  <li class="menu__item menu__item--btn"><a class="menu__link" href="Nous-contacter.html">Nous contacter</a></li>
+                  <li class="menu__item menu__item--btn"><a class="menu__link" href="#"><img src="public/image29.webp" alt="drapeau uk"></a></li>
+              </ul>
+          </nav>
+          <!-- Fin du menu principal -->
+  
+          </div>
+  
+  </header>
+  
+      <main class="main__content">
+      
+      <div class="header__tampon"> </div>
+
+    <div class="container">
+      <div class="gif">
+        <img src="https://i.postimg.cc/2yrFyxKv/giphy.gif" alt="gif_ing" />
+      </div>
+      <div class="main__article">
+        <h1 class="main__article">Error 404</h1>
+        <article>
+          La page que vous avez recherché est introuvable.
+        </article>
+        <article>
+            <a href="index.html" target="blank">
+                <button>Retour à l'acceuil <i class="far fa-hand-point-right"></i></button>
+              </a>
+        </article>
+        
+      </div>
+    </div>
+</main>
+  </body>
+</html>
