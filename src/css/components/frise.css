@@ -16,6 +16,7 @@
 	padding: 0px;
     margin : 40px 0px;
 	overflow: hidden;  
+	position: relative;
 }
 
 .images15 {
@@ -33,4 +34,90 @@
 	top:0;
 	left:0;
 	z-index: 0;
+	position: absolute;
+}
+.images152 {
+	width: 85vw;
+	height: 25vh;
+	left:0;
+}
+
+.images152 img{
+	width: 85vw;
+	height: 25vh;
+}
+
+.image152 {
+	top:0;
+	left:0;
+	z-index: 0;
+	position: absolute;
+}
+.images153 {
+	width: 85vw;
+	height: 25vh;
+	left:0;
+}
+
+.images153 img{
+	width: 85vw;
+	height: 25vh;
+}
+
+.image153 {
+	top:0;
+	left:0;
+	z-index: 0;
+	position: absolute;
+}
+.images154 {
+	width: 85vw;
+	height: 25vh;
+	left:0;
+}
+
+.images154 img{
+	width: 85vw;
+	height: 25vh;
+}
+
+.image154 {
+	top:0;
+	left:0;
+	z-index: 0;
+	position: absolute;
+}
+.images155 {
+	width: 85vw;
+	height: 25vh;
+	left:0;
+}
+
+.images155 img{
+	width: 85vw;
+	height: 25vh;
+}
+
+.image155 {
+	top:0;
+	left:0;
+	z-index: 0;
+	position: absolute;
+}
+.images156 {
+	width: 85vw;
+	height: 25vh;
+	left:0;
+}
+
+.images156 img{
+	width: 85vw;
+	height: 25vh;
+}
+
+.image156 {
+	top:0;
+	left:0;
+	z-index: 0;
+	position: absolute;
 }

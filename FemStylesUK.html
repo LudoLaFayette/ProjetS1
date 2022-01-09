@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fémokipédia, the true page without a bas point of view">
+    <title>Féminisme : une variété de styles</title>
+    <link rel='stylesheet' href='src/css/styles.css'>
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script> 
+</head>
+
+<body x-data="{ atTop: true }">
+    <header  class="header container" 
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
+
+    
+        <div class="header__start">
+        <a href="index.html"><img class="header__logo" src="public/logo/Group7.svg" alt="logo Fémokipédia"></a>
+        </div>
+
+        <div>
+        <h1>Femokipédia</h1>
+        </div>
+
+        <div class="header__end">
+
+        <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+            @pointerdown="menuIsOpen = !menuIsOpen" 
+            :class="menuIsOpen && 'menu-btn--open'">
+        <span class="menu-btn__bar"></span>
+        </button>
+
+        <!-- Menu principal -->
+
+        <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <li class="menu__item"><a class="menu__link" href="Histoire.html">Feminism's Story</a></li>
+                <li class="menu__item"><a class="menu__link" href="FigureCoco.html">The Figure : Coco Channel</a></li>
+                <li class="menu__item"><a class="menu__link" href="FemStylesUK.html">Les styles du féminisme</a></li>
+                <li class="menu__item"><a class="menu__link" href="glossaire.html">Glossary</a></li>                
+                <li class="menu__item"><a class="menu__link" href="galerie.html">Galery</a></li>
+                <li class="menu__item"><a class="menu__link" href="Frise-chronologique.html">Timeline</a></li>
+                <li class="menu__item"><a class="menu__link" href="A-propos.html">About us</a></li>
+                <li class="menu__item"><a class="menu__link" href="Autres-projets.html">Others Projects</a></li>
+                <li class="menu__item menu__item--btn"><a class="menu__link" href="Nous-contacter.html">Contact</a></li>
+                <li class="menu__item menu__item--btn"><a class="menu__link" href="index.html"><img src="public/image30.webp" alt="drapeau Fr"></a></li>
+            </ul>
+        </nav>
+        <!-- Fin du menu principal -->
+
+        </div>
+    
+</header>
+<main class="main__content">
+
+    
+    <div class="header__tampon"> </div>
+
+    <h1>Feminism : a variety of style</h1>
+    <article class="chapo">
+        Feminism, as we know it today, is seen as a movement for the liberation of women in society. A movement that demands that women be able to access the rights that men have. But the journey has grown longer and things seem to be going slowly. Since the 20th century, feminists have been separated in their thoughts. But they remain united in their actions, such as demonstrations. We will explore some of these feminist thoughts. These thoughts confuse the word "feminism", which suddenly loses its meaning.
+    </article>
+
+
+    <h2>Un féminisme "libérale"</h2>
+    <div class="main__txtEtImg">
+    <article >
+        We retrace the different movements thanks to a book from the B.U that I borrowed. This book is called "Pour la fin du sexisme", written by
+         <a href="galerie.html" style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">Angélique Gerard</a> in 2019 (Ed.Eyrolles).  
+         In this book, we retrace the history of feminism as we learn about the author herself, from what she thinks about it.
+    </article>
+
+    <figure>
+        <img src="public/image13.webp" alt="couverture livre Angélique Gérard">
+        <figcaption>
+            Cover of the book “Pour la fin du sexisme” 
+        </figcaption>
+    </figure>
+</div>
+    
+
+
+    <article class="main__article">
+        But above all, Angélique approaches an argument which seeks to convince the reader to "think woman". Because the men are still in a thought of "false feminism" for the majority. And this constitutes a major obstacle in the rights of women.
+    </article>
+
+
+    <article class="main__article">
+        So that's why so-called liberal feminism exists. These women were in droves in the streets for Simone Veil's abortion law (1975). So why were they there? Because these women were convinced in a picture. The image of a woman freed from her maternal side, which gives life. Woman has long been seen as a 
+        <a href="glossaire.html" style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">procreative being</a> and little for what she really is. Sexual harassment nowadays is seen as a way of badly warning a woman that a man wants to procreate with her. Suddenly, this form of feminism is one of the most publicized in France.
+    </article>
+
+    <h2>A "radical" feminism"</h2>
+
+    <article class="main__article">
+        Ten earlier than the liberal current, radical feminism wants to be a solution to a bigger problem. We all know that women are subject to sexual harassment at work. But we don't all pay attention to the hierarchy. Because this current thinks that by the position occupied by the men, the women are inferior. Angelique Gerard even says in her book: 
+    </article>
+
+    <blockquote>
+        "to designate the system by which men dominate women through a sexual division of labor - men for paid production, women for reproduction, unpaid". 
+    </blockquote>
+
+
+    <article class="main__article">
+        This corporate hierarchy would therefore be equal to that of a domestic life according to them. In addition, there is a "lesbian feminism" and an "equality feminism", two other branches of this movement.
+    </article>
+
+
+    <h2>An "egalitarian" feminism</h2>
+
+    <article  class="main__article">
+        It is the starting feminism, but this current here is of a general pleonasm. This current covers the majority of the movements, which will have finished dividing thereafter. 
+        But the divisions will have allowed unions thereafter. This thought, native in 1900, was able to give the necessary force to other currents to act.
+    </article>
+
+    <article class="main__article">
+        The action plan of this current to remedy gender equality in a very general way. This feminism can act on areas such as trade unionism, literature, history, science or the place in the public space. All this with the sole aim of improving the living conditions of women and reviewing their traditional place.
+    </article>
+
+    <article class="main__article" >
+        The advantage of this current is that it retains a major topical tone without losing membership. We are even starting to raise more taboo questions about sexual identity and orientation.  
+         <a href="glossaire.html"  style="text-decoration:none" onmouseover="style='text-decoration:underline'" onmouseout="style='text-decoration:none'">Transgenders people</a> and lesbians are thus better defended than before. This is when we talk about postmodern feminism, which touches on the most recent questions about women.
+    </article>
+
+    <p class="chapo">
+        Now you know more about feminism and how it has worked for the past few years. Do not hesitate to contact me for a possible problem or to send me an opinion. Thanks for reading 
+    </p>
+
+</main>
+    
+
+
+<footer class="footer container">
+    <div>
+        <p class="footer__p1">
+            Ludovic Faye – Groupe A2
+        </p>
+        <p class="footer__p2">Project done in the case of pedagogical exercice at MMI departement of Montbeliard
+        </p>                
+    </div> 
+    <div class="footer__end">
+    <div>
+        <a href="mailto:ludovicfaye89@gmail.com"> <img src="public/icons/Mail.svg" alt="logo mail"></a> 
+    </div> 
+    <div>
+        <img src="public/th-removebg-preview.svg" alt="logo dpt mmi">
+    </div>   
+    </div>     
+</footer>
+</body>
+
+</html>
